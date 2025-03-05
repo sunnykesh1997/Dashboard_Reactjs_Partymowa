@@ -12,7 +12,7 @@ const AddDecoration = () => {
 
   // Fetch decorations
   const fetchDecorations = () => {
-    axios.get('http://localhost:5000/api/decorations')
+    axios.get('https://backend-nodejs-partymowa.onrender.com/api/decorations')
       .then((response) => setDecorations(response.data))
       .catch((error) => console.error(error));
   };
@@ -42,7 +42,7 @@ const AddDecoration = () => {
 
     if (editId) {
       // Update decoration
-      axios.put(`http://localhost:5000/api/decorations/${editId}`, formDataToSend)
+      axios.put(`https://backend-nodejs-partymowa.onrender.com/api/decorations/${editId}`, formDataToSend)
         .then(() => {
           fetchDecorations();
           setFormData({ name: '', price: '', image: null });
@@ -52,7 +52,7 @@ const AddDecoration = () => {
     } else {
       
       // Add new decoration
-      axios.post('http://localhost:5000/api/decorations', formDataToSend,{
+      axios.post('https://backend-nodejs-partymowa.onrender.com/api/decorations', formDataToSend,{
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -68,7 +68,7 @@ const AddDecoration = () => {
 
   // Delete decoration
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:5000/api/decorations/${id}`)
+    axios.delete(`https://backend-nodejs-partymowa.onrender.com/api/decorations/${id}`)
       .then(() => fetchDecorations())
       .catch((error) => console.error(error));
   };
@@ -110,7 +110,7 @@ const AddDecoration = () => {
         <div className="decoration-list">
           {decorations.map((decoration) => (
             <div key={decoration._id} className="decoration-item">
-              <img src={`http://localhost:5000/${decoration.image}`} alt={decoration.name} />
+              <img src={`https://backend-nodejs-partymowa.onrender.com/${decoration.image}`} alt={decoration.name} />
               <h3>{decoration.name}</h3>
               <p>Price: ₹{decoration.price}</p>
               <button onClick={() => handleEdit(decoration)}>Edit</button>

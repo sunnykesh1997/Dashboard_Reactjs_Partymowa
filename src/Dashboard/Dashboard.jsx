@@ -14,7 +14,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const response = await axios.get('/api/bookings/admin/bookings');
+        const response = await axios.get('https://backend-nodejs-partymowa.onrender.com/api/bookings/admin/bookings');
         setBookings(response.data);
         setFilteredBookings(response.data); // Initially, show all bookings
       } catch (error) {

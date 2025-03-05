@@ -34,10 +34,10 @@
 
       try {
         if (editingId) {
-          await axios.put(`http://localhost:5000/api/cakes/update/${editingId}`, data);
+          await axios.put(`https://backend-nodejs-partymowa.onrender.com/api/cakes/update/${editingId}`, data);
           alert('Cake updated successfully!');
         } else {
-          const res = await axios.post('http://localhost:5000/api/cakes/add', data);
+          const res = await axios.post('https://backend-nodejs-partymowa.onrender.com/api/cakes/add', data);
           alert(res.data.message);
         }
         setFormData({ name: '', halfKgPrice: '', fullKgPrice: '', type: 'Egg' });
@@ -53,7 +53,7 @@
 
     const fetchCakes = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/cakes');
+        const res = await axios.get('https://backend-nodejs-partymowa.onrender.com/api/cakes');
         setCakes(res.data);
       } catch (error) {
         console.error(error);
@@ -124,7 +124,7 @@
           {currentImage && !image && (
             <div>
               <p>Current Image:</p>
-              <img src={`http://localhost:5000/${currentImage}`} alt="Cake" style={{ width: '100px' }} />
+              <img src={`https://backend-nodejs-partymowa.onrender.com/${currentImage}`} alt="Cake" style={{ width: '100px' }} />
             </div>
           )}
           <button type="submit">{editingId ? 'Update Cake' : 'Add Cake'}</button>
@@ -139,7 +139,7 @@
               <p>Full Kg Price: {cake.fullKgPrice}</p>
               <p>Type: {cake.type}</p>
               <img
-                src={`http://localhost:5000/${cake.image}`}
+                src={`https://backend-nodejs-partymowa.onrender.com/${cake.image}`}
                 alt={cake.name}
                 style={{ width: '100px' }}
               />

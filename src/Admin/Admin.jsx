@@ -20,7 +20,7 @@ const Admin = () => {
     const [currentThemeId, setCurrentThemeId] = useState(null);
     const fetchThemes = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/themes');
+            const response = await axios.get('https://backend-nodejs-partymowa.onrender.com/api/themes');
             setThemes(response.data);
         } catch (err) {
             console.error('Error fetching themes:', err.response?.data || err.message);
@@ -58,7 +58,7 @@ const Admin = () => {
             if (isUpdating) {
                 // Update theme if updating
                 response = await axios.put(
-                    `http://localhost:5000/api/themes/${currentThemeId}`,
+                    `https://backend-nodejs-partymowa.onrender.com/api/themes/${currentThemeId}`,
                     data,
                     {
                         headers: { 'Content-Type': 'multipart/form-data' },
@@ -68,7 +68,7 @@ const Admin = () => {
             } else {
                 // Add new theme if not updating
                 response = await axios.post(
-                    'http://localhost:5000/api/themes',
+                    'https://backend-nodejs-partymowa.onrender.com/api/themes',
                     data,
                     {
                         headers: { 'Content-Type': 'multipart/form-data' },
@@ -120,13 +120,13 @@ const Admin = () => {
 
     const handleDelete = async (themeId) => {
         try {
-            await axios.delete(`http://localhost:5000/api/themes/${themeId}`);
+            await axios.delete(`https://backend-nodejs-partymowa.onrender.com/api/themes/${themeId}`);
             alert('Theme deleted successfully!');
 
             // Refresh themes list after deletion
             const fetchThemes = async () => {
                 try {
-                    const response = await axios.get('http://localhost:5000/api/themes');
+                    const response = await axios.get('https://backend-nodejs-partymowa.onrender.com/api/themes');
                     setThemes(response.data);
                 } catch (err) {
                     console.error(err);

@@ -8,7 +8,7 @@ const AddRose = () => {
 
   // Fetch all roses from backend
   const fetchRoses = async () => {
-    const response = await axios.get('http://localhost:5000/api/roses');
+    const response = await axios.get('https://backend-nodejs-partymowa.onrender.com/api/roses');
     setRoses(response.data);
   };
 
@@ -35,9 +35,9 @@ const AddRose = () => {
     }
   
     if (editingRose) {
-      await axios.put(`http://localhost:5000/api/roses/update/${editingRose._id}`, formData);
+      await axios.put(`https://backend-nodejs-partymowa.onrender.com/api/roses/update/${editingRose._id}`, formData);
     } else {
-      await axios.post('http://localhost:5000/api/roses/add', formData);
+      await axios.post('https://backend-nodejs-partymowa.onrender.com/api/roses/add', formData);
     }
   
     setRoseData({ name: '', price: '', image: null });
@@ -47,7 +47,7 @@ const AddRose = () => {
   
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:5000/api/roses/delete/${id}`);
+    await axios.delete(`https://backend-nodejs-partymowa.onrender.com/api/roses/delete/${id}`);
     fetchRoses();
   };
 
