@@ -1,0 +1,64 @@
+/* Dashboard.css */
+table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+th, td {
+  text-align: center;
+  vertical-align: middle;
+ 
+}
+
+th {
+  background-color: #070808;
+  color: rgb(255, 255, 255);
+}
+
+tr:hover {  
+  background-color: #666464;
+  color: white;
+}
+
+.mb-3 {
+  margin-bottom: 20px;
+}
+
+.table thead th {
+  text-align: center;
+}
+
+.table tbody td {
+  text-align: center;
+}
+
+/* Style the input group to give space around the icon */
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-group .form-control {
+  padding-right: 40px; /* Add padding to the right side for the icon */
+}
+
+.input-group .input-group-text {
+  position: absolute;
+  right: 10px; /* Place the icon on the right side */
+  z-index: 10;
+  background-color: transparent; /* Remove background for cleaner design */
+  border: none;
+  cursor: pointer;
+}
+
+/* Optional styling for the search icon */
+.input-group .input-group-text svg {
+  color: #6c757d;
+  font-size: 18px;
+}
+
+.mb-3 {
+  margin-bottom: 20px;
+}
+

@@ -1,0 +1,89 @@
+/* AddCake.css */
+
+.addcake{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addcake h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.addcake form { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #7409f6;
+  padding: 10px 0;
+  
+}
+
+.addcake input, select {
+
+  width: 30%;
+  height: 60%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.addcake button {
+  background: #ff6600;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.addcake button:hover {
+  background: #e65c00;
+}
+
+.addcake img {
+  display: block;
+  width: 100px;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.addcake h2 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.addcake ul {
+  list-style: none;
+  padding: 0;
+}
+
+.addcake li {
+  text-align: center;
+  background: #f9f9f9;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.addcake li button {
+  margin-right: 10px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+}

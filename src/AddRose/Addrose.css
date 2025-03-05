@@ -1,0 +1,90 @@
+.addrose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.addrose .container {
+  background: #7409f6;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+
+.addrose h1, h2 {
+  color: #f14a08;
+  margin-bottom: 10px;
+}
+
+.addrose form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.addrose input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.addrose button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.addrose button:hover {
+  background-color: #0056b3;
+}
+
+.addrose ul {
+  list-style: none;
+  padding: 0;
+}
+
+.addrose li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.addrose li img {
+  border-radius: 5px;
+}
+
+.addrose li p {
+  flex: 1;
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+.addrose li button {
+  margin-left: 5px;
+  background-color: #dc3545;
+}
+
+.addrose li button:first-of-type {
+  background-color: #ffc107;
+}
+
+.addrose li button:first-of-type:hover {
+  background-color: #e0a800;
+}
+
+.addrose li button:hover {
+  background-color: #c82333;
+}
