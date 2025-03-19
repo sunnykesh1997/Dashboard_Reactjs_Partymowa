@@ -1,8 +1,8 @@
 import React from 'react';
 import './Footer.css';
 import logo from '../assets/party mowa logo hd.png';
-import { FaInstagram, FaFacebookF, FaYoutube, FaMapMarkerAlt } from "react-icons/fa"; // Corrected import
-import { IoCallOutline, IoMail } from "react-icons/io5"; // Corrected the mail icon
+import { FaInstagram, FaFacebookF, FaYoutube, FaMapMarkerAlt } from "react-icons/fa";
+import { IoCallOutline, IoMail } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 
 const Footer = () => {

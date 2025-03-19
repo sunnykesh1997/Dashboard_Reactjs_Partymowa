@@ -77,7 +77,9 @@ const Navbar = () => {
                     <li className='nav-link'><Link to={'/addcake'}>AddCakes</Link></li>
                     <li className='nav-link'><Link to={'/adddecor'}>AddDecoration</Link></li>
                     <li className='nav-link'><Link to={'/addrose'}>AddRoses</Link></li>
+                    <li className='nav-link'><Link to={'/Addone'}>Addone</Link></li>
                     <li className='nav-link'><Link to={'/dashboard'}>Dashboard</Link></li>
+
                     
                   </ul>
                 </div>

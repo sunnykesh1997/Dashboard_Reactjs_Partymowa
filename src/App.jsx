@@ -9,6 +9,7 @@ import AddDecoration from './AddDecoration/AddDecoration'
 import AddRose from './AddRose/AddRose'
 import Navbar from './Navbar/Navbar'
 import Footer from './Footer/Footer'
+import Addone from './addone/Addone';
 
 
 
@@ -22,6 +23,7 @@ const App = () => {
       <Route path="/adddecor" element={<AddDecoration />} />
       <Route path='/addrose' element={<AddRose/>}/>
       <Route path='/dashboard' element={<Dashboard/>}/>
+      <Route path="/Addone" element={<Addone/>} />
     </Routes>
     <Footer/>
     </BrowserRouter>
